@@ -1,0 +1,14 @@
+{
+  "_comment": "Cosmic Platform dimension — uses void generator, terrain comes from pre-built region files.",
+  "type": "voidworld:cosmic_platform",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:the_void",
+      "layers": [],
+      "lakes": false,
+      "features": false,
+      "structure_overrides": []
+    }
+  }
+}

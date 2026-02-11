@@ -1,0 +1,98 @@
+{
+  "_comment": "Example dialog tree — data-driven dialog format for VoidWorld",
+  "id": "voidworld:village_elder_intro",
+  "root_node": "greeting",
+  "nodes": {
+    "greeting": {
+      "text_key": "dialog.voidworld.elder.greeting",
+      "choices": [
+        {
+          "text_key": "dialog.voidworld.elder.choice.who_are_you",
+          "next_node": "about_elder"
+        },
+        {
+          "text_key": "dialog.voidworld.elder.choice.what_happened",
+          "next_node": "about_events"
+        },
+        {
+          "text_key": "dialog.voidworld.elder.choice.need_work",
+          "next_node": "offer_quest",
+          "condition": {
+            "type": "NOT",
+            "inner": {
+              "type": "QUEST_ACTIVE",
+              "quest_id": "voidworld:village_first_task"
+            }
+          }
+        },
+        {
+          "text_key": "dialog.voidworld.elder.choice.goodbye",
+          "next_node": ""
+        }
+      ]
+    },
+    "about_elder": {
+      "text_key": "dialog.voidworld.elder.about_self",
+      "choices": [
+        {
+          "text_key": "dialog.voidworld.common.back",
+          "next_node": "greeting"
+        }
+      ]
+    },
+    "about_events": {
+      "text_key": "dialog.voidworld.elder.about_events",
+      "choices": [
+        {
+          "text_key": "dialog.voidworld.elder.choice.king",
+          "next_node": "about_king"
+        },
+        {
+          "text_key": "dialog.voidworld.elder.choice.capital",
+          "next_node": "about_capital"
+        },
+        {
+          "text_key": "dialog.voidworld.common.back",
+          "next_node": "greeting"
+        }
+      ]
+    },
+    "about_king": {
+      "text_key": "dialog.voidworld.elder.about_king",
+      "choices": [
+        {
+          "text_key": "dialog.voidworld.common.back",
+          "next_node": "about_events"
+        }
+      ]
+    },
+    "about_capital": {
+      "text_key": "dialog.voidworld.elder.about_capital",
+      "choices": [
+        {
+          "text_key": "dialog.voidworld.common.back",
+          "next_node": "about_events"
+        }
+      ]
+    },
+    "offer_quest": {
+      "text_key": "dialog.voidworld.elder.offer_quest",
+      "choices": [
+        {
+          "text_key": "dialog.voidworld.elder.choice.accept_quest",
+          "next_node": "",
+          "actions": [
+            {
+              "type": "START_QUEST",
+              "quest_id": "voidworld:village_first_task"
+            }
+          ]
+        },
+        {
+          "text_key": "dialog.voidworld.elder.choice.decline_quest",
+          "next_node": "greeting"
+        }
+      ]
+    }
+  }
+}

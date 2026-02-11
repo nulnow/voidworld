@@ -1,0 +1,23 @@
+{
+  "_comment": "Example NPC definition — data-driven NPC format for VoidWorld",
+  "id": "voidworld:village_elder",
+  "name_key": "npc.voidworld.village_elder.name",
+  "role": "QUEST_GIVER",
+  "dialog_id": "voidworld:village_elder_intro",
+  "location": {
+    "dimension": "minecraft:overworld",
+    "x": 0, "y": 64, "z": 0,
+    "_comment": "Actual coordinates set during world building"
+  },
+  "appearance": {
+    "skin": "voidworld:textures/entity/npc/village_elder.png",
+    "profession_overlay": "farmer"
+  },
+  "schedule": {
+    "dawn": { "activity": "WANDER", "area": "village_square" },
+    "noon": { "activity": "WORK", "area": "elder_house" },
+    "dusk": { "activity": "SOCIAL", "area": "village_tavern" },
+    "night": { "activity": "SLEEP", "area": "elder_house" }
+  },
+  "trades": []
+}

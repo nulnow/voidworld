@@ -1,0 +1,18 @@
+{
+  "_comment": "Sound events will be added here as content is created.",
+  "_example_format": {
+    "void_crack_ambient": {
+      "category": "ambient",
+      "sounds": [
+        "voidworld:void_crack_ambient_1",
+        "voidworld:void_crack_ambient_2"
+      ]
+    },
+    "castle_explosion": {
+      "category": "ambient",
+      "sounds": [
+        { "name": "voidworld:castle_explosion", "volume": 0.8, "pitch": 0.9 }
+      ]
+    }
+  }
+}

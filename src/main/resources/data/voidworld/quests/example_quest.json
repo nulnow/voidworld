@@ -1,0 +1,62 @@
+{
+  "_comment": "Example quest definition — data-driven quest format for VoidWorld",
+  "id": "voidworld:village_first_task",
+  "name_key": "quest.voidworld.village_first_task.name",
+  "description_key": "quest.voidworld.village_first_task.desc",
+  "category": "MAIN_STORY",
+  "is_main_story": true,
+  "prerequisites": [],
+  "stages": [
+    {
+      "id": "talk_to_elder",
+      "description_key": "quest.voidworld.village_first_task.stage.talk_elder",
+      "objectives": [
+        {
+          "id": "find_elder",
+          "type": "TALK_TO",
+          "target": "voidworld:village_elder",
+          "required_count": 1,
+          "description_key": "quest.voidworld.village_first_task.obj.find_elder"
+        }
+      ]
+    },
+    {
+      "id": "gather_supplies",
+      "description_key": "quest.voidworld.village_first_task.stage.gather",
+      "objectives": [
+        {
+          "id": "collect_wood",
+          "type": "COLLECT",
+          "target": "minecraft:oak_log",
+          "required_count": 16,
+          "description_key": "quest.voidworld.village_first_task.obj.wood"
+        },
+        {
+          "id": "collect_food",
+          "type": "COLLECT",
+          "target": "minecraft:bread",
+          "required_count": 8,
+          "description_key": "quest.voidworld.village_first_task.obj.food"
+        }
+      ]
+    },
+    {
+      "id": "report_back",
+      "description_key": "quest.voidworld.village_first_task.stage.report",
+      "objectives": [
+        {
+          "id": "return_to_elder",
+          "type": "TALK_TO",
+          "target": "voidworld:village_elder",
+          "required_count": 1,
+          "description_key": "quest.voidworld.village_first_task.obj.return"
+        }
+      ]
+    }
+  ],
+  "rewards": {
+    "currency": 50,
+    "experience": 100,
+    "items": []
+  }
+}

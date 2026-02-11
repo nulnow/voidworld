@@ -1,0 +1,15 @@
+{
+  "id": "voidworld:capital",
+  "nameKey": "location.voidworld.capital",
+  "dimension": "minecraft:overworld",
+  "minX": -400, "minY": 63, "minZ": -300,
+  "maxX": 400, "maxY": 103, "maxZ": 500,
+  "type": "CITY",
+  "tags": ["act_2", "main_city"],
+  "spawnX": 0, "spawnY": 64, "spawnZ": 100,
+  "associatedQuests": ["voidworld:enter_capital", "voidworld:castle_infiltration"],
+  "associatedNpcs": ["voidworld:gate_guard", "voidworld:market_trader", "voidworld:mercenary_captain"],
+  "protectionLevel": "PROTECTED",
+  "showEntryNotification": true,
+  "ambientSound": "voidworld:ambient.capital_city"
+}

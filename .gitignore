@@ -1,0 +1,67 @@
+# ══════════════════════════════════════════════════════════════════
+#  VoidWorld .gitignore
+# ══════════════════════════════════════════════════════════════════
+
+# ── Gradle ───────────────────────────────────────────────────────
+.gradle/
+build/
+out/
+
+# Gradle wrapper jar is tracked (needed for builds without Gradle installed)
+# !gradle/wrapper/gradle-wrapper.jar
+
+# ── IDE ──────────────────────────────────────────────────────────
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# ── Java / Kotlin ────────────────────────────────────────────────
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# Keep the Gradle wrapper jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# ── Minecraft / Forge ────────────────────────────────────────────
+run/
+logs/
+*.log
+crash-reports/
+# Minecraft runtime config (not source code config package)
+/run/config/
+
+# Generated resources (re-generated from data gen)
+src/generated/
+
+# Forge reobf mapping cache
+.mixin.out/
+reobfJar/
+
+# ── OS ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# ── Maven publish (local) ───────────────────────────────────────
+mcmodsrepo/

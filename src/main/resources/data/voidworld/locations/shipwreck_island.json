@@ -1,0 +1,12 @@
+{
+  "id": "voidworld:shipwreck_beach",
+  "nameKey": "location.voidworld.shipwreck_beach",
+  "dimension": "minecraft:overworld",
+  "minX": -2300, "minY": 60, "minZ": -1900,
+  "maxX": -2100, "maxY": 100, "maxZ": -1700,
+  "type": "WILDERNESS",
+  "tags": ["starting_area", "act_1"],
+  "spawnX": -2200, "spawnY": 61, "spawnZ": -1800,
+  "associatedQuests": ["voidworld:awakening"],
+  "showEntryNotification": true
+}
