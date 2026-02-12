@@ -8,7 +8,7 @@
   "tags": ["act_2", "main_city"],
   "spawnX": 0, "spawnY": 64, "spawnZ": 100,
   "associatedQuests": ["voidworld:enter_capital", "voidworld:castle_infiltration"],
-  "associatedNpcs": ["voidworld:gate_guard", "voidworld:market_trader", "voidworld:mercenary_captain"],
+  "associatedNpcs": ["voidworld:city_guardian", "voidworld:gate_guard", "voidworld:market_trader", "voidworld:mercenary_captain"],
   "protectionLevel": "PROTECTED",
   "showEntryNotification": true,
   "ambientSound": "voidworld:ambient.capital_city"

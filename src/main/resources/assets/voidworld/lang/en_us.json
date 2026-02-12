@@ -1,4 +1,10 @@
 {
+  "effect.voidworld.wanted_for_destruction": "Wanted for Destruction",
+  "effect.voidworld.divine_shield": "Divine Shield",
+  "entity.voidworld.city_guardian": "Protector",
+  "entity.voidworld.paladin": "Paladin",
+  "entity.voidworld.dark_zombie": "Dark Zombie",
+  "entity.voidworld.summoned_zombie": "Summoned Zombie",
   "itemGroup.voidworld": "VoidWorld",
 
   "_comment_menu": "=== Main Menu ===",

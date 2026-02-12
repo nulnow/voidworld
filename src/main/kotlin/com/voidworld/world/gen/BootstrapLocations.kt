@@ -210,6 +210,7 @@ object BootstrapLocations {
     val COSMIC = "voidworld:cosmic_platform"
 
     val cosmicLocations = listOf(
+        // Main hub
         loc("cosmic_main_platform", "Main Observatory", COSMIC,
             -100, -100, 100, 100, y = 64, type = LocationType.BUILDING,
             tags = setOf("act_5", "cosmic")),
@@ -228,7 +229,24 @@ object BootstrapLocations {
 
         loc("cosmic_teleporter", "Dimensional Teleporter", COSMIC,
             -20, -20, 20, 20, y = 64, type = LocationType.TELEPORT_POINT,
-            tags = setOf("act_5"))
+            tags = setOf("act_5")),
+
+        // Wizard temple & connecting platforms
+        loc("cosmic_wizard_temple", "Wizard's Temple", COSMIC,
+            -240, -50, -120, 50, y = 64, height = 25, type = LocationType.DUNGEON,
+            tags = setOf("act_5", "cosmic", "wizard")),
+
+        loc("cosmic_platform_bridge", "Bridge to Temple", COSMIC,
+            -130, -25, -105, 25, y = 64, type = LocationType.TELEPORT_POINT,
+            tags = setOf("act_5", "cosmic")),
+
+        loc("cosmic_platform_north", "Northern Lookout", COSMIC,
+            -20, -150, 20, -120, y = 64, type = LocationType.POINT_OF_INTEREST,
+            tags = setOf("act_5", "cosmic")),
+
+        loc("cosmic_platform_south", "Southern Terrace", COSMIC,
+            -30, 110, 30, 140, y = 64, type = LocationType.POINT_OF_INTEREST,
+            tags = setOf("act_5", "cosmic"))
     )
 
     // ═════════════════════════════════════════════════════════════════════

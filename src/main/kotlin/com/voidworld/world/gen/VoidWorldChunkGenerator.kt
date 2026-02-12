@@ -12,7 +12,6 @@ import net.minecraft.world.level.StructureManager
 import net.minecraft.world.level.biome.Biome
 import net.minecraft.world.level.biome.BiomeManager
 import net.minecraft.world.level.biome.Biomes
-import net.minecraft.world.level.biome.FixedBiomeSolver
 import net.minecraft.world.level.biome.FixedBiomeSource
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.state.BlockState

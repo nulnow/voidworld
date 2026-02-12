@@ -1,4 +1,10 @@
 {
+  "effect.voidworld.wanted_for_destruction": "Преступник для уничтожения",
+  "effect.voidworld.divine_shield": "Божественный щит",
+  "entity.voidworld.city_guardian": "Защитник",
+  "entity.voidworld.paladin": "Паладин",
+  "entity.voidworld.dark_zombie": "Тёмный Зомби",
+  "entity.voidworld.summoned_zombie": "Призванный Зомби",
   "itemGroup.voidworld": "VoidWorld",
 
   "_comment_menu": "=== Главное меню ===",

@@ -4,6 +4,7 @@ import com.voidworld.VoidWorldMod
 import net.minecraft.core.registries.Registries
 import net.minecraft.network.chat.Component
 import net.minecraft.sounds.SoundEvent
+import net.minecraft.world.effect.MobEffect
 import net.minecraft.world.entity.EntityType
 import net.minecraft.world.inventory.MenuType
 import net.minecraft.world.item.CreativeModeTab
@@ -30,6 +31,18 @@ object ModRegistries {
     // ── Item registry ───────────────────────────────────────────────────
     val ITEMS: DeferredRegister<Item> =
         DeferredRegister.create(ForgeRegistries.ITEMS, VoidWorldMod.MOD_ID)
+
+    // ── Mob effect registry ──────────────────────────────────────────────
+    val MOB_EFFECTS: DeferredRegister<MobEffect> =
+        DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, VoidWorldMod.MOD_ID)
+
+    val WANTED_FOR_DESTRUCTION = MOB_EFFECTS.register("wanted_for_destruction") {
+        com.voidworld.core.effect.WantedForDestructionEffect()
+    }
+
+    val DIVINE_SHIELD = MOB_EFFECTS.register("divine_shield") {
+        com.voidworld.core.effect.DivineShieldEffect()
+    }
 
     // ── Entity type registry ────────────────────────────────────────────
     val ENTITY_TYPES: DeferredRegister<EntityType<*>> =
@@ -70,6 +83,7 @@ object ModRegistries {
     fun register(modEventBus: IEventBus) {
         BLOCKS.register(modEventBus)
         ITEMS.register(modEventBus)
+        MOB_EFFECTS.register(modEventBus)
         ENTITY_TYPES.register(modEventBus)
         SOUND_EVENTS.register(modEventBus)
         MENU_TYPES.register(modEventBus)

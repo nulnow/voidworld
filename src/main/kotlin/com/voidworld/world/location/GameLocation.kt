@@ -169,11 +169,11 @@ data class LocationData(
         maxPos = BlockPos(maxX, maxY, maxZ),
         type = try { LocationType.valueOf(type) } catch (_: Exception) { LocationType.POINT_OF_INTEREST },
         parentId = parentId?.let { ResourceLocation.tryParse(it) },
-        tags = tags.toSet(),
+        tags = (tags ?: emptyList()).toSet(),
         spawnPoint = if (spawnX != null && spawnY != null && spawnZ != null)
             BlockPos(spawnX, spawnY, spawnZ) else null,
-        associatedQuests = associatedQuests.mapNotNull { ResourceLocation.tryParse(it) },
-        associatedNpcs = associatedNpcs.mapNotNull { ResourceLocation.tryParse(it) },
+        associatedQuests = (associatedQuests ?: emptyList()).mapNotNull { ResourceLocation.tryParse(it) },
+        associatedNpcs = (associatedNpcs ?: emptyList()).mapNotNull { ResourceLocation.tryParse(it) },
         protectionLevel = protectionLevel,
         showEntryNotification = showEntryNotification,
         ambientSound = ambientSound?.let { ResourceLocation.tryParse(it) }

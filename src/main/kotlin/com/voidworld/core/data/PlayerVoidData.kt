@@ -13,7 +13,6 @@ import net.minecraftforge.common.capabilities.ICapabilitySerializable
 import net.minecraftforge.common.util.LazyOptional
 import net.minecraftforge.event.AttachCapabilitiesEvent
 import net.minecraftforge.eventbus.api.SubscribeEvent
-import net.minecraftforge.fml.common.Mod
 
 /**
  * Per-player persistent data for all VoidWorld systems.
@@ -130,10 +129,8 @@ class PlayerVoidData {
         override fun deserializeNBT(nbt: CompoundTag) = data.loadFromNbt(nbt)
     }
 
-    @Mod.EventBusSubscriber(modid = VoidWorldMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     object EventHandler {
         @SubscribeEvent
-        @JvmStatic
         fun onAttachCapabilities(event: AttachCapabilitiesEvent<Player>) {
             if (event.`object` is Player) {
                 event.addCapability(RESOURCE, Provider())

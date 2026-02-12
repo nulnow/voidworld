@@ -99,6 +99,12 @@ object WorldBootstrapper {
             border = Blocks.RED_NETHER_BRICKS.defaultBlockState(),
             corner = Blocks.MAGMA_BLOCK.defaultBlockState(),
             center = Blocks.SOUL_LANTERN.defaultBlockState()
+        ),
+        LocationType.POINT_OF_INTEREST to Palette(
+            floor = Blocks.END_STONE_BRICKS.defaultBlockState(),
+            border = Blocks.LIGHT_GRAY_CONCRETE.defaultBlockState(),
+            corner = Blocks.LIGHT_GRAY_GLAZED_TERRACOTTA.defaultBlockState(),
+            center = Blocks.END_ROD.defaultBlockState()
         )
     )
 
@@ -121,6 +127,19 @@ object WorldBootstrapper {
             total += bootstrapDimension(server, dimName)
         }
         return total
+    }
+
+    /**
+     * Ensures cosmic_platform has platforms generated. If the main spawn area is void (air),
+     * runs bootstrap. Safe to call multiple times — only generates when needed.
+     */
+    fun ensureCosmicPlatformBootstrapped(server: MinecraftServer): Int {
+        val level = resolveLevel(server, "cosmic_platform") ?: return 0
+        val spawnCheck = BlockPos(0, 64, 0)
+        if (!level.getBlockState(spawnCheck).isAir) {
+            return 0 // Already bootstrapped
+        }
+        return bootstrapDimension(server, "cosmic_platform")
     }
 
     /**

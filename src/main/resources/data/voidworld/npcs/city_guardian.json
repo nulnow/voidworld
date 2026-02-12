@@ -1,0 +1,13 @@
+{
+  "_comment": "City Guardian — spawns in cities, patrols randomly. Steve-like appearance.",
+  "id": "voidworld:city_guardian",
+  "name_key": "entity.voidworld.city_guardian",
+  "role": "GUARD",
+  "location": {
+    "dimension": "minecraft:overworld",
+    "_comment": "Spawned at runtime in city locations"
+  },
+  "appearance": {
+    "skin": "voidworld:textures/entity/city_guardian.png"
+  }
+}

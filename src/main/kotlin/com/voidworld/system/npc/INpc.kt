@@ -35,8 +35,9 @@ interface INpc {
     fun onInteract(player: Player)
 
     /** Trade offers if this NPC is a merchant. */
-    fun getTradeOffers(): List<TradeOffer>
-        get() = emptyList()
+    fun getTradeOffers(): List<TradeOffer> {
+        return emptyList()
+    }
 }
 
 enum class NpcRole {
