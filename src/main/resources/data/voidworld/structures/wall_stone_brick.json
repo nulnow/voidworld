@@ -1,0 +1,15 @@
+{
+  "name": "Stone Brick Wall",
+  "blocks": [
+    {"type": "minecraft:stone_bricks", "relativePosition": [0, 0, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [1, 0, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [2, 0, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [0, 1, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [1, 1, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [2, 1, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [0, 2, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [1, 2, 0]},
+    {"type": "minecraft:stone_bricks", "relativePosition": [2, 2, 0]}
+  ],
+  "blockImage": "minecraft:block/stone_bricks"
+}

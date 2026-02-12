@@ -121,5 +121,8 @@ class VoidWorldMod {
     private fun registerClientHandlers() {
         LOGGER.info("Registering client-side event handlers...")
         MinecraftForge.EVENT_BUS.register(com.voidworld.client.gui.VoidWorldTitleScreen)
+        MinecraftForge.EVENT_BUS.register(com.voidworld.client.gui.WorldEditorOverlay)
+        MinecraftForge.EVENT_BUS.register(com.voidworld.client.gui.StructureHistoryOverlay)
+        MinecraftForge.EVENT_BUS.register(com.voidworld.client.gui.TitleScreenBackground)
     }
 }

@@ -1,0 +1,12 @@
+{
+  "name": "Stone Wall",
+  "blocks": [
+    {"type": "minecraft:stone", "relativePosition": [0, 0, 0]},
+    {"type": "minecraft:stone", "relativePosition": [1, 0, 0]},
+    {"type": "minecraft:stone", "relativePosition": [2, 0, 0]},
+    {"type": "minecraft:stone", "relativePosition": [0, 1, 0]},
+    {"type": "minecraft:stone", "relativePosition": [1, 1, 0]},
+    {"type": "minecraft:stone", "relativePosition": [2, 1, 0]}
+  ],
+  "blockImage": "minecraft:block/stone"
+}

@@ -1,8 +1,8 @@
 # VoidWorld
 
-A narrative-driven RPG adventure mod for Minecraft 1.20.1 (Forge).
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+$env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot"; .\gradlew.bat runClient 2>&
 
-The protagonist wakes up on an unknown island after a shipwreck, remembering nothing. As they explore jungles, caves, and valleys, they reach a village where mysterious events unfold: the king has vanished, and the capital is locked down. Inside the towering castle -- its floating spires shrouded in black clouds -- lies the truth: the king was a scientist whose experiments with vacuum energy breached the boundary between universes, threatening to erase all existence.
 
 ## Tech Stack
 
@@ -98,10 +98,6 @@ src/main/
 - **Housing** -- City plots, wilderness claims, floating island and waterfront properties
 - **Puzzles** -- Programming, combinatorics, riddles, and environmental challenges
 
-## Documentation
-
-- [Game Design Document](docs/GDD.md) -- Full story, mechanics, locations, and design details
-- [Development Roadmap](docs/ROADMAP.md) -- Phased development plan
 
 ## License
 

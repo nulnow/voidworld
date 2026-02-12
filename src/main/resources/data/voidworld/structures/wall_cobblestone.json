@@ -1,0 +1,12 @@
+{
+  "name": "Cobblestone Wall",
+  "blocks": [
+    {"type": "minecraft:cobblestone", "relativePosition": [0, 0, 0]},
+    {"type": "minecraft:cobblestone", "relativePosition": [1, 0, 0]},
+    {"type": "minecraft:cobblestone", "relativePosition": [2, 0, 0]},
+    {"type": "minecraft:cobblestone", "relativePosition": [0, 1, 0]},
+    {"type": "minecraft:cobblestone", "relativePosition": [1, 1, 0]},
+    {"type": "minecraft:cobblestone", "relativePosition": [2, 1, 0]}
+  ],
+  "blockImage": "minecraft:block/cobblestone"
+}

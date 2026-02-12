@@ -37,12 +37,11 @@ object ModNetwork {
      */
     fun register() {
         VoidWorldMod.LOGGER.info("Registering network packets...")
-        // Packets will be registered here as systems are implemented.
-        // Example:
-        // registerPacket<QuestSyncPacket>(NetworkDirection.PLAY_TO_CLIENT)
-        // registerPacket<DialogResponsePacket>(NetworkDirection.PLAY_TO_SERVER)
-        // registerPacket<EconomyUpdatePacket>(NetworkDirection.PLAY_TO_CLIENT)
-        // registerPacket<StealthStatePacket>(NetworkDirection.PLAY_TO_CLIENT)
+        CHANNEL.messageBuilder(StructureHistorySyncPacket::class.java, nextId++, NetworkDirection.PLAY_TO_CLIENT)
+            .encoder { msg, buf -> msg.encode(buf) }
+            .decoder { StructureHistorySyncPacket.decode(it) }
+            .consumerMainThread { msg, ctx -> msg.handle(ctx) }
+            .add()
     }
 
     // ── Utility methods ─────────────────────────────────────────────────

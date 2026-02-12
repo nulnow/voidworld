@@ -1,0 +1,20 @@
+{
+  "name": "Birch Tree",
+  "blocks": [
+    {"type": "minecraft:birch_log", "relativePosition": [0, 0, 0]},
+    {"type": "minecraft:birch_log", "relativePosition": [0, 1, 0]},
+    {"type": "minecraft:birch_log", "relativePosition": [0, 2, 0]},
+    {"type": "minecraft:birch_log", "relativePosition": [0, 3, 0]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [-1, 3, -1]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [0, 3, -1]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [1, 3, -1]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [-1, 3, 0]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [0, 3, 0]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [1, 3, 0]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [-1, 3, 1]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [0, 3, 1]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [1, 3, 1]},
+    {"type": "minecraft:birch_leaves", "relativePosition": [0, 4, 0]}
+  ],
+  "blockImage": "minecraft:block/birch_log"
+}

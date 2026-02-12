@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-cli-scripts",
+  "version": "1.0.0",
+  "description": "CLI scripts for VoidWorld",
+  "main": "create-image-from-matrix.js",
+  "scripts": {
+    "create-image": "node create-image-from-matrix.js",
+    "generate-structure-icons": "node generate-structure-icons.js",
+    "design-large-building": "node design-large-building.js",
+    "design-fortress-wall": "node design-fortress-wall.js",
+    "design-castle-tower": "node design-castle-tower.js",
+    "split-panorama": "node split-panorama.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^3.2.1"
+  }
+}

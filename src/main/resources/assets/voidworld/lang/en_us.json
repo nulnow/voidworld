@@ -1,4 +1,8 @@
 {
+  "_comment_overlay": "=== World Editor Overlay ===",
+  "gui.voidworld.overlay.time_day": "Day",
+  "gui.voidworld.overlay.time_night": "Night",
+  "gui.voidworld.overlay.weather_clear": "Clear Weather",
   "effect.voidworld.wanted_for_destruction": "Wanted for Destruction",
   "effect.voidworld.divine_shield": "Divine Shield",
   "entity.voidworld.city_guardian": "Protector",
@@ -6,7 +10,28 @@
   "entity.voidworld.dark_zombie": "Dark Zombie",
   "entity.voidworld.summoned_zombie": "Summoned Zombie",
   "itemGroup.voidworld": "VoidWorld",
+  "itemGroup.voidworld.editor": "VoidWorld Editor",
+  "block.voidworld.editor_wood": "Editor Wood",
+  "structure.voidworld.house_city_standard": "House City Standard",
+  "structure.voidworld.tree_oak": "Oak Tree",
+  "structure.voidworld.tree_spruce": "Spruce Tree",
+  "structure.voidworld.tree_birch": "Birch Tree",
+  "structure.voidworld.wall_stone": "Stone Wall",
+  "structure.voidworld.wall_stone_brick": "Stone Brick Wall",
+  "structure.voidworld.wall_cobblestone": "Cobblestone Wall",
+  "structure.voidworld.house_stone_brick_mansion": "Stone Brick Mansion",
+  "structure.voidworld.house_stone_brick_tower": "Stone Brick Tower",
+  "structure.voidworld.house_stone_cobble_manor": "Cobblestone Manor",
+  "structure.voidworld.building_large": "Large Multi-Floor Building",
+  "structure.voidworld.wall_fortress": "Fortress Wall",
+  "structure.voidworld.tower_castle": "Castle Tower",
+  "structure.voidworld.platform_small": "Small Platform",
+  "structure.voidworld.platform_medium": "Medium Platform",
+  "structure.voidworld.platform_large": "Large Platform",
+  "structure.voidworld.platform_giant": "Giant Platform",
 
+  "_comment_gui": "=== GUI / HUD ===",
+  "gui.voidworld.structure_history": "Placement history",
   "_comment_menu": "=== Main Menu ===",
   "menu.voidworld.play": "Enter VoidWorld",
   "menu.voidworld.continue": "Continue VoidWorld",
@@ -16,6 +41,7 @@
   "_comment_items": "=== Items ===",
   "item.voidworld.location_wand": "Location Wand",
   "item.voidworld.location_wand.tooltip": "Debug tool: right-click two blocks to mark a location boundary",
+  "item.voidworld.undo": "Undo",
 
   "_comment_quests": "=== Quest System ===",
   "quest.voidworld.category.main_story": "Main Story",
@@ -91,5 +117,6 @@
   "location.voidworld.floating_islands": "Sky Reaches — Floating Islands",
   "location.voidworld.pirate_cove": "Corsair's Rest — Pirate Cove",
   "location.voidworld.cosmic_platform": "The Observatory — Cosmic Platform",
-  "location.voidworld.consciousness_planet": "Noosphere — The Frozen World"
+  "location.voidworld.consciousness_planet": "Noosphere — The Frozen World",
+  "location.voidworld.dev": "Dev — Testing Dimension"
 }

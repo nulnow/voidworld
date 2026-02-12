@@ -1,6 +1,7 @@
 package com.voidworld.world.gen
 
 import com.voidworld.VoidWorldMod
+import com.voidworld.world.dimension.ModDimensions
 import com.voidworld.world.location.GameLocation
 import com.voidworld.world.location.LocationRegistry
 import com.voidworld.world.location.LocationType
@@ -127,6 +128,27 @@ object WorldBootstrapper {
             total += bootstrapDimension(server, dimName)
         }
         return total
+    }
+
+    /**
+     * Ensures dev dimension has a stone platform at spawn. Generates on first entry.
+     * @return true if platform was generated
+     */
+    fun ensureDevPlatformGenerated(server: MinecraftServer): Boolean {
+        val level = server.getLevel(ModDimensions.DEV) ?: return false
+        val spawnCheck = BlockPos(0, 64, 0)
+        if (!level.getBlockState(spawnCheck).isAir) {
+            return false // Already generated
+        }
+        // 16x16 stone platform at y=64, centered at 0,0
+        val stone = Blocks.STONE.defaultBlockState()
+        for (x in -8..7) {
+            for (z in -8..7) {
+                level.setBlockAndUpdate(BlockPos(x, 64, z), stone)
+            }
+        }
+        VoidWorldMod.LOGGER.info("Dev dimension: generated stone platform at spawn")
+        return true
     }
 
     /**
@@ -304,6 +326,7 @@ object WorldBootstrapper {
                 )
                 server.getLevel(key)
             }
+            "dev" -> server.getLevel(ModDimensions.DEV)
             else -> null
         }
     }

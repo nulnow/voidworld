@@ -65,3 +65,7 @@ desktop.ini
 
 # ── Maven publish (local) ───────────────────────────────────────
 mcmodsrepo/
+
+# ── Node.js ─────────────────────────────────────────────────────
+nodejs-cli-scripts/node_modules/
+nodejs-cli-scripts/package-lock.json

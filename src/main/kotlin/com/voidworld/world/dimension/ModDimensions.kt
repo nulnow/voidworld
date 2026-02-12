@@ -46,6 +46,14 @@ object ModDimensions {
         modResource("consciousness_planet")
     )
 
+    /**
+     * Dev — empty void dimension for testing. Single stone platform generated on first entry.
+     */
+    val DEV: ResourceKey<Level> = ResourceKey.create(
+        Registries.DIMENSION,
+        modResource("dev")
+    )
+
     // ── Dimension Type keys ─────────────────────────────────────────────
 
     val COSMIC_PLATFORM_TYPE: ResourceKey<DimensionType> = ResourceKey.create(
@@ -58,10 +66,15 @@ object ModDimensions {
         modResource("consciousness_planet")
     )
 
+    val DEV_TYPE: ResourceKey<DimensionType> = ResourceKey.create(
+        Registries.DIMENSION_TYPE,
+        modResource("dev")
+    )
+
     // ── Helpers ─────────────────────────────────────────────────────────
 
     /** All custom dimension level keys for iteration. */
-    val ALL_CUSTOM_DIMENSIONS = listOf(COSMIC_PLATFORM, CONSCIOUSNESS_PLANET)
+    val ALL_CUSTOM_DIMENSIONS = listOf(COSMIC_PLATFORM, CONSCIOUSNESS_PLANET, DEV)
 
     /** Check if a dimension key belongs to VoidWorld. */
     fun isVoidWorldDimension(key: ResourceKey<Level>): Boolean =

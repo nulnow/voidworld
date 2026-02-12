@@ -7,14 +7,16 @@ import com.voidworld.core.util.PlayerAttackerTracker
 import com.voidworld.core.util.sendModMessage
 import com.voidworld.system.quest.QuestManager
 import com.voidworld.world.location.LocationRegistry
-import com.voidworld.client.gui.VoidWorldTitleScreen
 import com.voidworld.core.registry.ModEntities
 import com.voidworld.core.registry.ModRegistries
 import com.voidworld.core.util.VoidWorldSessionFlags
 import com.voidworld.entity.CityGuardianEntity
 import com.voidworld.entity.SummonedZombieEntity
 import com.voidworld.entity.CityGuardianSpawning
+import com.voidworld.world.dimension.ModDimensions
+import com.voidworld.world.gen.WorldBootstrapper
 import com.voidworld.world.location.LocationTracker
+import com.voidworld.world.structure.StructurePlacementHistory
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal
 import net.minecraft.world.entity.LivingEntity
@@ -122,6 +124,14 @@ object ModEvents {
     fun onPlayerJoin(event: EntityJoinLevelEvent) {
         val entity = event.entity
         if (entity is ServerPlayer && !event.level.isClientSide) {
+            // Dev dimension: generate stone platform on first entry
+            if (event.level.dimension() == ModDimensions.DEV) {
+                entity.server?.execute {
+                    if (WorldBootstrapper.ensureDevPlatformGenerated(entity.server)) {
+                        entity.sendModMessage("§e[Dev] Stone platform generated.")
+                    }
+                }
+            }
             VoidWorldMod.LOGGER.info("Player joined: ${entity.name.string}")
 
             // VoidWorld start: night + 10 summoned zombies
@@ -146,6 +156,11 @@ object ModEvents {
                     }
                     VoidWorldSessionFlags.voidWorldSessionStarting = false
                 }
+            }
+
+            // Sync structure history to client (empty on join, or current if reconnecting)
+            entity.server?.execute {
+                StructurePlacementHistory.syncToPlayer(entity)
             }
 
             // Only send welcome once per session
@@ -188,6 +203,7 @@ object ModEvents {
     @SubscribeEvent
     fun onPlayerLoggedOut(event: PlayerEvent.PlayerLoggedOutEvent) {
         LocationTracker.removePlayer(event.entity.uuid)
+        StructurePlacementHistory.clear(event.entity.uuid)
         welcomedPlayers.remove(event.entity.uuid)
         VoidWorldMod.LOGGER.info("Player left: ${event.entity.name.string}")
     }

@@ -75,7 +75,7 @@ object ModCommands {
                         .then(Commands.argument("dimension", StringArgumentType.word())
                             .suggests { _, builder ->
                                 SharedSuggestionProvider.suggest(
-                                    listOf("overworld", "cosmic_platform", "consciousness_planet"),
+                                    listOf("overworld", "cosmic_platform", "consciousness_planet", "dev"),
                                     builder
                                 )
                             }
@@ -189,7 +189,8 @@ object ModCommands {
         "nether"                to Level.NETHER,
         "end"                   to Level.END,
         "cosmic_platform"       to ModDimensions.COSMIC_PLATFORM,
-        "consciousness_planet"  to ModDimensions.CONSCIOUSNESS_PLANET
+        "consciousness_planet"  to ModDimensions.CONSCIOUSNESS_PLANET,
+        "dev"                  to ModDimensions.DEV
     )
 
     // ═══════════════════════════════════════════════════════════════════
@@ -348,6 +349,12 @@ object ModCommands {
             val bootstrapped = WorldBootstrapper.ensureCosmicPlatformBootstrapped(player.server)
             if (bootstrapped > 0) {
                 player.sendModMessage("§eGenerated $bootstrapped platforms in Cosmic Platform.")
+            }
+        }
+        // Auto-generate dev platform on first entry
+        if (dimKey == ModDimensions.DEV) {
+            if (WorldBootstrapper.ensureDevPlatformGenerated(player.server)) {
+                player.sendModMessage("§eGenerated stone platform in Dev dimension.")
             }
         }
 

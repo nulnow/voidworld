@@ -1,4 +1,9 @@
 {
+  "_comment_overlay": "=== World Editor Overlay ===",
+  "gui.voidworld.structure_history": "История размещений",
+  "gui.voidworld.overlay.time_day": "День",
+  "gui.voidworld.overlay.time_night": "Ночь",
+  "gui.voidworld.overlay.weather_clear": "Ясная погода",
   "effect.voidworld.wanted_for_destruction": "Преступник для уничтожения",
   "effect.voidworld.divine_shield": "Божественный щит",
   "entity.voidworld.city_guardian": "Защитник",
@@ -6,6 +11,25 @@
   "entity.voidworld.dark_zombie": "Тёмный Зомби",
   "entity.voidworld.summoned_zombie": "Призванный Зомби",
   "itemGroup.voidworld": "VoidWorld",
+  "itemGroup.voidworld.editor": "VoidWorld Editor",
+  "block.voidworld.editor_wood": "Дерево редактора",
+  "structure.voidworld.house_city_standard": "Стандартный городской дом",
+  "structure.voidworld.tree_oak": "Дуб",
+  "structure.voidworld.tree_spruce": "Ель",
+  "structure.voidworld.tree_birch": "Берёза",
+  "structure.voidworld.wall_stone": "Каменная стена",
+  "structure.voidworld.wall_stone_brick": "Стена из каменного кирпича",
+  "structure.voidworld.wall_cobblestone": "Булыжная стена",
+  "structure.voidworld.house_stone_brick_mansion": "Особняк из каменного кирпича",
+  "structure.voidworld.house_stone_brick_tower": "Башня из каменного кирпича",
+  "structure.voidworld.house_stone_cobble_manor": "Булыжный особняк",
+  "structure.voidworld.building_large": "Крупное многоэтажное здание",
+  "structure.voidworld.wall_fortress": "Стена крепости",
+  "structure.voidworld.tower_castle": "Башня замка",
+  "structure.voidworld.platform_small": "Малая платформа",
+  "structure.voidworld.platform_medium": "Средняя платформа",
+  "structure.voidworld.platform_large": "Огромная платформа",
+  "structure.voidworld.platform_giant": "Гигантская платформа",
 
   "_comment_menu": "=== Главное меню ===",
   "menu.voidworld.play": "Войти в VoidWorld",
@@ -16,6 +40,7 @@
   "_comment_items": "=== Предметы ===",
   "item.voidworld.location_wand": "Жезл разметки",
   "item.voidworld.location_wand.tooltip": "Отладочный инструмент: ПКМ по двум блокам для разметки границ локации",
+  "item.voidworld.undo": "Отмена",
 
   "_comment_quests": "=== Система квестов ===",
   "quest.voidworld.category.main_story": "Основной сюжет",
@@ -91,5 +116,6 @@
   "location.voidworld.floating_islands": "Небесные Выси — Летающие Острова",
   "location.voidworld.pirate_cove": "Приют Корсаров — Пиратская Бухта",
   "location.voidworld.cosmic_platform": "Обсерватория — Космическая Платформа",
-  "location.voidworld.consciousness_planet": "Ноосфера — Замёрзший Мир"
+  "location.voidworld.consciousness_planet": "Ноосфера — Замёрзший Мир",
+  "location.voidworld.dev": "Dev — Тестовое измерение"
 }
