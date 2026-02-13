@@ -17,16 +17,16 @@ cd voidworld
 
 ```bat
 rem Генерация run-конфигураций (один раз после клонирования)
-gradlew.bat genIntellijRuns
+.\gradlew.bat genIntellijRuns
 
 rem Запуск клиента Minecraft с модом
-gradlew.bat runClient
+.\gradlew.bat runClient
 
 rem Запуск сервера
-gradlew.bat runServer
+.\gradlew.bat runServer
 
 rem Сборка JAR-файла
-gradlew.bat build
+.\gradlew.bat build
 ```
 
 ## Запуск на macOS / Linux
