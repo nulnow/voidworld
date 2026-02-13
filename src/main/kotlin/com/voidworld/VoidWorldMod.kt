@@ -60,7 +60,7 @@ class VoidWorldMod {
         modEventBus.addListener(::onClientSetup)
         modEventBus.addListener(::onEntityAttributes)
         if (FMLEnvironment.dist == Dist.CLIENT) {
-            modEventBus.addListener(::onRegisterRenderers)
+            com.voidworld.client.ClientModSetup.register()
         }
 
         // Register ourselves for server and other game events
@@ -89,22 +89,6 @@ class VoidWorldMod {
 
     private fun onClientSetup(event: FMLClientSetupEvent) {
         LOGGER.info("VoidWorld client setup...")
-        // Client-side setup: register renderers, screens, key bindings, etc.
-    }
-
-    private fun onRegisterRenderers(event: net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers) {
-        event.registerEntityRenderer(ModEntities.CITY_GUARDIAN.get()) { context ->
-            com.voidworld.client.renderer.CityGuardianRenderer(context)
-        }
-        event.registerEntityRenderer(ModEntities.DARK_ZOMBIE.get()) { context ->
-            com.voidworld.client.renderer.DarkZombieRenderer(context)
-        }
-        event.registerEntityRenderer(ModEntities.PALADIN.get()) { context ->
-            com.voidworld.client.renderer.PaladinRenderer(context)
-        }
-        event.registerEntityRenderer(ModEntities.SUMMONED_ZOMBIE.get()) { context ->
-            com.voidworld.client.renderer.SummonedZombieRenderer(context)
-        }
     }
 
     private fun onEntityAttributes(event: EntityAttributeCreationEvent) {

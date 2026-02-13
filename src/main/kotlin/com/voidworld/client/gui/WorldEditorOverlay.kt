@@ -81,11 +81,18 @@ object WorldEditorOverlay {
 
     private fun runCommand(command: String) {
         val minecraft = Minecraft.getInstance()
-        minecraft.execute {
-            val server = minecraft.singleplayerServer ?: return@execute
-            val serverPlayer = server.getPlayerList().getPlayer(minecraft.player?.uuid ?: return@execute) ?: return@execute
-            val source = serverPlayer.createCommandSourceStack()
-            server.commands.performPrefixedCommand(source, command)
+        val player = minecraft.player ?: return
+        val server = minecraft.singleplayerServer
+        if (server != null) {
+            // Singleplayer: run on integrated server
+            minecraft.execute {
+                val serverPlayer = server.getPlayerList().getPlayer(player.uuid) ?: return@execute
+                val source = serverPlayer.createCommandSourceStack()
+                server.commands.performPrefixedCommand(source, command)
+            }
+        } else {
+            // Multiplayer: send command to server
+            player.connection?.sendCommand(command)
         }
     }
 }

@@ -15,7 +15,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent
  */
 object TitleScreenBackground {
 
-    private val PANORAMA_BASE = ResourceLocation.fromNamespaceAndPath(VoidWorldMod.MOD_ID, "textures/gui/title/background/panorama")
+    private val PANORAMA_BASE = ResourceLocation(VoidWorldMod.MOD_ID, "textures/gui/title/background/panorama")
     private val CUSTOM_CUBE_MAP = CubeMap(PANORAMA_BASE)
     private val CUSTOM_PANORAMA = PanoramaRenderer(CUSTOM_CUBE_MAP)
 

@@ -1,5 +1,17 @@
 # VoidWorld
 
+## Screenshots
+
+![2026-02-13_03.10.14](screenshots/2026-02-13_03.10.14.png)
+
+![2026-02-13_03.12.45](screenshots/2026-02-13_03.12.45.png)
+
+![2026-02-13_03.13.16](screenshots/2026-02-13_03.13.16.png)
+
+![2026-02-13_03.13.18](screenshots/2026-02-13_03.13.18.png)
+
+---
+
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 $env:JAVA_HOME = "C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot"; .\gradlew.bat runClient 2>&
 
